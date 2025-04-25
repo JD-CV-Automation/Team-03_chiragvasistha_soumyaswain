@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Automated CV Screening System
 
 This FastAPI-based project automates the collection, evaluation, and feedback process of resumes received via Gmail. It parses resumes, compares them with a job description, scores them, stores results in a local DB, and optionally sends personalized feedback to candidates.
@@ -27,3 +28,6 @@ GMAIL_PASSWORD=your-app-password
 
 Running the App
 uvicorn app1:app --reload
+=======
+# Team-03_chiragvasistha_Soumyaswain
+>>>>>>> 9673750e96e6852d3df4c0111f5c3a81d235d3f9
