@@ -127,46 +127,6 @@ async def fetch_and_evaluate_resumes(
     except Exception as e:
         return {"error": str(e)}
 
-# @app.post("/send-feedback/")
-# def send_feedback_to_candidates(
-#     background_tasks: BackgroundTasks,
-#     gmail_id: str = Form(...),
-#     gmail_password: str = Form(...)
-# ):
-#     try:
-#         db = load_db()
-#         if not db:
-#             return {"message": "No candidates found in DB."}
-
-#         for row in db:
-#             name = row.get("name")
-#             email_id = row.get("email")
-#             jd_cv_score = row.get("jd_cv_score")
-#             batch_year = row.get("batch_year")
-#             ai_exp = row.get("ai_experience")
-
-#             subject, body = generate_feedback_email(
-#                 candidate_name=name,
-#                 jd_cv_score=jd_cv_score,
-#                 batch_year=batch_year,
-#                 ai_exp=ai_exp
-#             )
-#             background_tasks.add_task(  
-#                 send_feedback_email,
-#                 gmail_id,
-#                 gmail_password,
-#                 email_id,
-#                 subject,
-#                 body
-#             )
-
-#         return {"message": f"Feedback emails scheduled for {len(db)} candidates."}
-
-#     except Exception as e:
-#         return {"error": str(e)}
- 
-
-
 class Recipient(BaseModel):
     email: str
     name: str
